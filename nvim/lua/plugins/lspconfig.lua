@@ -17,8 +17,12 @@ return {
 
     local lspconfig = require("lspconfig")
     lspconfig.lua_ls.setup({
-      diagnostics = {
-        globals = {"vim","it","describe","before_each","after_each"}
+      settings = {
+        Lua = {
+          diagnostics = {
+            globals = {"vim","it","describe","before_each","after_each"}
+          }
+        }
       }
     })
   end
