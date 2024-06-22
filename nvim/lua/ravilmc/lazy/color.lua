@@ -5,7 +5,7 @@ return {
     opts = {},
     config = function()
         require("ayu").setup({
-            mirage = true,
+            mirage = false,
             terminal = true,
             overrides = {},
         })

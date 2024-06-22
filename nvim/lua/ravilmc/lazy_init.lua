@@ -16,3 +16,4 @@ require("lazy").setup({
     spec = "ravilmc.lazy",
     change_detection = { notify = false },
 })
+
