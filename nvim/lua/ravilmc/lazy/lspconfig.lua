@@ -1,3 +1,8 @@
+function GoModTidy()
+	vim.cmd("!go mod tidy")
+	vim.cmd("LspRestart")
+end
+
 return {
 	"neovim/nvim-lspconfig",
 	dependencies = {
@@ -110,5 +115,7 @@ return {
 		vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
 		vim.keymap.set("n", "gD", vim.lsp.buf.declaration, {})
 		vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, {})
+
+		vim.api.nvim_create_user_command("GoModTidy", GoModTidy, { nargs = 0 })
 	end,
 }
